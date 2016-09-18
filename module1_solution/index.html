@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lunch Checker :: Cousera Single Page Application Course. Module 1 Solution</title>
+  </head>
+  <body ng-app="LunchCheck">
+    <div class="lunch-checker" ng-controller="LunchCheckController">
+      <h1>Lunch checker</h1>
+      <p>Enter comma separated list of dishes you usually eat for lunch. <br>NOTE: empty items will be ignored.</p>
+      <input class="lunchItems" length="100" type="text" ng-model="lunchItems" placeholder="Enter your list here..."
+      ><button class="btn" ng-click="checkLunch()">Check If Too Much</button>
+      <br>
+      <div class="message-bordered info" ng-show="checkPerformed && !emptyInputFlag">{{getMessage()}}</div>
+      <div class="message-bordered warning" ng-show="emptyInputFlag">Please enter data first</div>
+    </div>
+
+    <script src="https://code.angularjs.org/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
