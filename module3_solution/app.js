@@ -33,13 +33,14 @@
       var service = this;
 
       service.getMatchedMenuItems = function(searchTerm) {
+        var term = searchTerm.tolowerCase();
         return $http({
             method: 'GET',
             url: SERVER_URL
           })
           .then(function (result) {
             return result.data.menu_items.filter(function(value) {
-              return value.description.indexOf(searchTerm) !== -1;
+              return value.description.toLowerCase().indexOf(term) !== -1;
             });
           })
           .catch(function (error) {
