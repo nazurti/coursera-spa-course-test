@@ -1,0 +1,15 @@
+.menu-item {
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  border-radius: 4px;
+  color: #a94442;
+  margin-bottom: 5px;
+  padding: 20px;
+}
+
+.menu-item > .btn {
+  background-color: #a94442;
+  border-radius: 4px;
+  color: #fff;
+  padding: 4px;
+}

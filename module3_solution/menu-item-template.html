@@ -1,0 +1,5 @@
+<div class="col-md-12 menu-item" ng-repeat="item in found">
+  <strong>{{item.name}} ({{item.short_name}})</strong>
+  <p>{{item.description}}</p>
+  <button class="btn" ng-click="onRemove({index: $index})">Don\'t want this one!</button>
+</div>
