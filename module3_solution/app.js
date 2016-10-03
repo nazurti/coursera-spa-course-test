@@ -33,7 +33,7 @@
       var service = this;
 
       service.getMatchedMenuItems = function(searchTerm) {
-        var term = searchTerm.tolowerCase();
+        var term = searchTerm.toLowerCase();
         return $http({
             method: 'GET',
             url: SERVER_URL
