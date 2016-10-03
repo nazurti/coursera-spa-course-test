@@ -13,14 +13,19 @@
 
       ctrl.search = function () {
         ctrl.lastSearchTerm = ctrl.searchTerm;
-        var promise = MenuSearchService.getMatchedMenuItems(ctrl.searchTerm);
+        if (ctrl.lastSearchTerm === '') {
+          ctrl.found = [];
+        }
+        else {
+          var promise = MenuSearchService.getMatchedMenuItems(ctrl.searchTerm);
 
-        promise.then(function(response) {
-          ctrl.found = response;
-        })
-        .catch(function (error) {
-          console.log('Error occured: ', error);
-        });
+          promise.then(function(response) {
+            ctrl.found = response;
+          })
+          .catch(function (error) {
+            console.log('Error occured: ', error);
+          });  
+        }
       }
 
       ctrl.removeItem = function(index) {
