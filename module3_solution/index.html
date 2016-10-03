@@ -15,7 +15,7 @@
       <div class="form-group">
         <button class="btn" ng-click=ctrl.search()>Narrow It Down For Me!</button>
       </div>
-      <div class="alert alert-info text-center" ng-if="ctrl.found.length === 0 || ctrl.searchTerm === ''">Nothing found</div>
+      <div class="alert alert-info text-center" ng-if="ctrl.found.length === 0 || ctrl.lastSearchTerm === ''">Nothing found</div>
       <div found-items class="found-items" found="ctrl.found" on-remove="ctrl.removeItem(index)">
       </div>
     </div>

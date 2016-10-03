@@ -12,6 +12,7 @@
       var ctrl = this;
 
       ctrl.search = function () {
+        ctrl.lastSearchTerm = ctrl.searchTerm;
         var promise = MenuSearchService.getMatchedMenuItems(ctrl.searchTerm);
 
         promise.then(function(response) {
