@@ -2,6 +2,6 @@
   <li ng-repeat="item in $ctrl.list">
     <strong>{{item.name}}</strong>
     <p>{{item.description }}</p>
-    <p>From ${{item.price_small}}</p>
+    <p ng-show="item.price_small">From ${{item.price_small}}</p>
   </li>
 </ul>
