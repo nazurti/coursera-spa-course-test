@@ -1,0 +1,17 @@
+.categories > li {
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  border-radius: 4px;
+  color: #a94442;
+  cursor: pointer;
+  list-style: none;
+  margin-bottom: 5px;
+  padding: 20px;
+}
+
+.items > li {
+  background-color: #dff0d8;
+  list-style: none;
+  margin-bottom: 5px;
+  padding: 10px 20px;
+}
